@@ -1,0 +1,145 @@
+/* App Style Sheet */
+
+html {
+    height: 100%;
+}
+
+body {
+    font-size: 13px;
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    min-height: 100%;
+    padding-bottom: 20px;
+    padding-top: 70px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set padding to keep sidebars from hitting the header */
+.sidebars {
+    padding-top: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/* START - Styles for validation helpers */
+
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* END - Styles for validation helpers */
+
+
+/* START - Styles for top nav bar */
+.navbar-default.top-navbar {
+    background-color: #4eaded;
+    border-color: #4eaded;
+}
+
+.navbar-default.top-navbar h1 {
+    color: white;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+/* END - Styles for top nav bar */
+
+
+/* START - Styles for container */
+
+.container.app-container {
+    width: 100%;
+    max-width: 100%;
+}
+
+.workout-display-div{
+    padding: 40px;
+    text-align: center;
+}
+
+.workout-display-div .img-responsive {
+    cursor: pointer;
+    height: 360px;
+    margin: 25px auto;
+    width: 540px;
+}
+
+.workout-display-div .time-progress {
+    margin-top: 40px;
+}
+
+/* END - Styles for container */
+
+
+/* START - Styles for start page */
+
+.text-center {
+    color: #4eaded;
+}
+
+#start {
+    margin-top: 25px;
+    text-align: center;
+}
+
+#start a {
+    color: #4eaded;
+    font-size: 67px;
+    text-decoration: none;
+}
+
+#start a:hover {
+    color: #4eaded;
+}
+
+#start a .glyphicon {
+    top: 8px;
+}
+
+/* END - Styles for start page */
+
+
+/* START - Styles for workout page */
+
+.workout-app-container {
+    padding-top: 15px;
+}
+
+#video-panel .panel-body {
+    max-height: 650px;
+    overflow: auto;
+}
+
+/* END - Styles for workout page */
