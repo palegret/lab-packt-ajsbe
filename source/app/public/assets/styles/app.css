@@ -143,3 +143,16 @@ input[type="checkbox"].input-validation-error {
 }
 
 /* END - Styles for workout page */
+
+
+/* START - My own styles */
+
+.procedure {
+    padding-left: 15px;
+}
+
+.procedure > li {
+    list-style-type: square;
+}
+
+/* END - My own styles */

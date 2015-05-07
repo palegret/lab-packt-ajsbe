@@ -120,11 +120,11 @@
                         '//www.youtube.com/embed/BABOdJ-2Z6o',
                         '//www.youtube.com/embed/c4DAnQ6DtF8'
                     ],
-                    procedure: 'Assume an erect position, with feet together and arms at your side.\
-                        Slightly bend your knees, and propel yourself a few inches into the air.\
-                        While in air, bring your legs out to the side about shoulder width or slightly wider.\
-                        As you are moving your legs outward, you should raise your arms up over your head; arms should be slightly bent throughout the entire in-air movement.\
-                        Your feet should land shoulder width or wider as your hands meet above your head with arms slightly bent.'
+                    procedure: '<ul class="procedure"><li>Assume an erect position, with feet together and arms at your side.</li>\
+                        <li>Slightly bend your knees, and propel yourself a few inches into the air.</li>\
+                        <li>While in air, bring your legs out to the side about shoulder width or slightly wider.</li>\
+                        <li>As you are moving your legs outward, you should raise your arms up over your head; arms should be slightly bent throughout the entire in-air movement.</li>\
+                        <li>Your feet should land shoulder width or wider as your hands meet above your head with arms slightly bent.</li></ul>'
                 }),
                 duration: 30
             });
@@ -139,8 +139,8 @@
                         '//www.youtube.com/embed/y-wV4Venusw',
                         '//www.youtube.com/embed/MMV3v4ap4ro'
                     ],
-                    procedure: 'Place your back against a wall with your feet shoulder width apart and a little ways out from the wall.\
-                        Then, keeping your back against the wall, lower your hips until your knees form right angles. '
+                    procedure: '<ul class="procedure"><li>Place your back against a wall with your feet shoulder width apart and a little ways out from the wall.</li>\
+                        <li>Then, keeping your back against the wall, lower your hips until your knees form right angles.</li></ul>'
                 }),
                 duration: 30
             });
@@ -158,9 +158,9 @@
                         '//www.youtube.com/embed/ynPwl6qyUNM',
                         '//www.youtube.com/embed/OicNTT2xzMI'
                     ],
-                    procedure: 'Lie prone on the ground with hands placed as wide or slightly wider than shoulder width. \
-                        Keeping the body straight, lower body to the ground by bending arms at the elbows. \
-                        Raise body up off the ground by extending the arms.'
+                    procedure: '<ul class="procedure"><li>Lie prone on the ground with hands placed as wide or slightly wider than shoulder width.</li>\
+                        <li>Keeping the body straight, lower body to the ground by bending arms at the elbows.</li>\
+                        <li>Raise body up off the ground by extending the arms.</li></ul>'
                 }),
                 duration: 30
             });
@@ -175,12 +175,12 @@
                         '//www.youtube.com/embed/Xyd_fa5zoEU',
                         '//www.youtube.com/embed/MKmrqcoCZ-M'
                     ],
-                    procedure: 'Lie on your back with your knees bent and feet flat on the floor, hip-width apart.\
-                        Place your hands behind your head so your thumbs are behind your ears.\
-                        Hold your elbows out to the sides but rounded slightly in.\
-                        Gently pull your abdominals inward.\
-                        Curl up and forward so that your head, neck, and shoulder blades lift off the floor.\
-                        Hold for a moment at the top of the movement and then lower slowly back down.'
+                    procedure: '<ul class="procedure"><li>Lie on your back with your knees bent and feet flat on the floor, hip-width apart.</li>\
+                        <li>Place your hands behind your head so your thumbs are behind your ears.</li>\
+                        <li>Hold your elbows out to the sides but rounded slightly in.</li>\
+                        <li>Gently pull your abdominals inward.</li>\
+                        <li>Curl up and forward so that your head, neck, and shoulder blades lift off the floor.</li>\
+                        <li>Hold for a moment at the top of the movement and then lower slowly back down.</li></ul>'
                 }),
                 duration: 30
             });
@@ -194,10 +194,10 @@
                     videos: [
                         '//www.youtube.com/embed/aajhW7DD1EA'
                     ],
-                    procedure: 'Position your chair in front of you.\
-                        Stand with your feet about hip width apart, arms at your sides.\
-                        Step up onto the seat with one foot, pressing down while bringing your other foot up next to it. \
-                        Step back with the leading foot and bring the trailing foot down to finish one step-up.'
+                    procedure: '<ul class="procedure"><li>Position your chair in front of you.</li>\
+                        <li>Stand with your feet about hip width apart, arms at your sides.</li>\
+                        <li>Step up onto the seat with one foot, pressing down while bringing your other foot up next to it.</li>\
+                        <li>Step back with the leading foot and bring the trailing foot down to finish one step-up.</li></ul>'
                 }),
                 duration: 30
             });
@@ -212,11 +212,11 @@
                         '//www.youtube.com/embed/QKKZ9AGYTi4',
                         '//www.youtube.com/embed/UXJrBgI2RxA'
                     ],
-                    procedure: 'Stand with your head facing forward and your chest held up and out.\
-                        Place your feet shoulder-width apart or little wider. Extend your hands straight out in front of you.\
-                        Sit back and down like you\'re sitting into a chair. Keep your head facing straight as your upper body bends forward a bit. Rather than allowing your back to round, let your lower back arch slightly as you go down.\
-                        Lower down so your thighs are parallel to the floor, with your knees over your ankles. Press your weight back into your heels.\
-                        Keep your body tight, and push through your heels to bring yourself back to the starting position.'
+                    procedure: '<ul class="procedure"><li>Stand with your head facing forward and your chest held up and out.\
+                        <li>Place your feet shoulder-width apart or little wider. Extend your hands straight out in front of you.\
+                        <li>Sit back and down like you\'re sitting into a chair. Keep your head facing straight as your upper body bends forward a bit. Rather than allowing your back to round, let your lower back arch slightly as you go down.\
+                        <li>Lower down so your thighs are parallel to the floor, with your knees over your ankles. Press your weight back into your heels.\
+                        <li>Keep your body tight, and push through your heels to bring yourself back to the starting position.'
                 }),
                 duration: 30
             });
@@ -231,10 +231,10 @@
                         '//www.youtube.com/embed/tKjcgfu44sI',
                         '//www.youtube.com/embed/jox1rb5krQI'
                     ],
-                    procedure: 'Sit up on a chair. Your legs should be slightly extended, with your feet flat on the floor.\
-                        Place your hands edges of the chair. Your palms should be down, fingertips pointing towards the floor.\
-                        Without moving your legs, bring your glutes forward off the chair.\
-                        Steadily lower yourself. When your elbows form 90 degrees angles, push yourself back up to starting position.'
+                    procedure: '<ul class="procedure"><li>Sit up on a chair. Your legs should be slightly extended, with your feet flat on the floor.\
+                        <li>Place your hands edges of the chair. Your palms should be down, fingertips pointing towards the floor.\
+                        <li>Without moving your legs, bring your glutes forward off the chair.\
+                        <li>Steadily lower yourself. When your elbows form 90 degrees angles, push yourself back up to starting position.'
                 }),
                 duration: 30
             });
@@ -249,10 +249,10 @@
                         '//www.youtube.com/embed/pSHjTRCQxIw',
                         '//www.youtube.com/embed/TvxNkmjdhMM'
                     ],
-                    procedure: 'Get into pushup position on the floor.\
-                        Bend your elbows 90 degrees and rest your weight on your forearms.\
-                        Your elbows should be directly beneath your shoulders, and your body should form a straight line from head to feet.\
-                        Hold this position.'
+                    procedure: '<ul class="procedure"><li>Get into pushup position on the floor.</li>\
+                        <li>Bend your elbows 90 degrees and rest your weight on your forearms.</li>\
+                        <li>Your elbows should be directly beneath your shoulders, and your body should form a straight line from head to feet.</li>\
+                        <li>Hold this position.</li></ul>'
                 }),
                 duration: 30
             });
@@ -267,8 +267,8 @@
                         '//www.youtube.com/embed/OAJ_J3EZkdY',
                         '//www.youtube.com/embed/8opcQdC-V-U'
                     ],
-                    procedure: 'Start standing with feet hip-width apart. \
-                        Do inplace jog with your knees lifting as much as possible towards your chest.'
+                    procedure: '<ul class="procedure"><li>Start standing with feet hip-width apart.</li>\
+                        <li>Do inplace jog with your knees lifting as much as possible towards your chest.</li></ul>'
                 }),
                 duration: 30
             });
@@ -282,12 +282,12 @@
                     videos: [
                         '//www.youtube.com/embed/Z2n58m2i4jg'
                     ],
-                    procedure: 'Stand erect with your feet about one shoulder width apart.\
-                        Put your hands on your hips, keep your back as straight as possible, relax your shoulders and keep your eyes facing directly ahead.\
-                        Take a large step forward with one leg.\
-                        As you step forward, lower your hips and bend your knees until they both form 90 degree angles.\
-                        Return to starting position.\
-                        Repeat with your alternate leg.'
+                    procedure: '<ul class="procedure"><li>Stand erect with your feet about one shoulder width apart.</li>\
+                        <li>Put your hands on your hips, keep your back as straight as possible, relax your shoulders and keep your eyes facing directly ahead.</li>\
+                        <li>Take a large step forward with one leg.</li>\
+                        <li>As you step forward, lower your hips and bend your knees until they both form 90 degree angles.</li>\
+                        <li>Return to starting position.</li>\
+                        <li>Repeat with your alternate leg.</li></ul>'
                 }),
                 duration: 30
             });
@@ -301,8 +301,8 @@
                     videos: [
                         '//www.youtube.com/embed/qHQ_E-f5278'
                     ],
-                    procedure: 'Assume the classic pushup position, but as you come up, rotate your body so your right arm lifts up and extends overhead.\
-                        Return to the starting position, lower yourself, then push up and rotate till your left hand points toward the ceiling.'
+                    procedure: '<ul class="procedure"><li>Assume the classic pushup position, but as you come up, rotate your body so your right arm lifts up and extends overhead.</li>\
+                        <li>Return to the starting position, lower yourself, then push up and rotate till your left hand points toward the ceiling.</li></ul>'
                 }),
                 duration: 30
             });
@@ -317,10 +317,10 @@
                         '//www.youtube.com/embed/wqzrb67Dwf8',
                         '//www.youtube.com/embed/_rdfjFSFKMY'
                     ],
-                    procedure: 'Lie on your side, in a straight line from head to feet, resting on your forearm.\
-                        Your elbow should be directly under your shoulder.\
-                        With your abdominals gently contracted, lift your hips off the floor, maintaining the line.\
-                        Keep your hips square and your neck in line with your spine. Hold the position.'
+                    procedure: '<ul class="procedure"><li>Lie on your side, in a straight line from head to feet, resting on your forearm.</li>\
+                        <li>Your elbow should be directly under your shoulder.</li>\
+                        <li>With your abdominals gently contracted, lift your hips off the floor, maintaining the line.</li>\
+                        <li>Keep your hips square and your neck in line with your spine. Hold the position.</li></ul>'
                 }),
                 duration: 30
             });

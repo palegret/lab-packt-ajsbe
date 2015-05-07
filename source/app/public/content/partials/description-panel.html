@@ -15,8 +15,8 @@
                 Steps
             </h3>
         </div>
-        <div class="panel-body">
-            {{currentExercise.details.procedure || "Nothing!"}}
+        <div class="panel-body" ng-bind-html="currentExercise.details.procedure">
+            <!--Current Exercise Procedure HTML-->
         </div>
     </div>
 </div>
