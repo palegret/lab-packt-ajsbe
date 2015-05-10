@@ -1,8 +1,10 @@
+/* globals angular */
+
 'use strict';
 
 angular.module('7MinuteWorkout', []);
 
-angular.module('app', ['ngRoute', 'ngSanitize', '7MinuteWorkout'])
+angular.module('app', ['ngRoute', 'ngSanitize', 'mediaPlayer', '7MinuteWorkout'])
 	.config(function ($routeProvider, $sceDelegateProvider) {
 	    var viewRoot = 'content/views/';
 	    
