@@ -1,8 +1,15 @@
-<div class="row">
+<div class="row workout-app-container" tabindex="1" ng-keypress="onKeyPressed($event)">
     <div id="description-panel" class="col-sm-2 sidebars" ng-include="'content/partials/description-panel.html'">
         <!--Description Panel-->
     </div>
-    <div id="exercise-pane" class="col-sm-6">
+    <!--Original ng-mouseenter and ng-mouseenter implementation, replaced by better CSS-based solution:-->
+    <!--<div id="exercise-pane" class="col-sm-6" ng-mouseenter="showPauseOverlay=true" ng-mouseleave="showPauseOverlay=false">-->
+    <div id="exercise-pane" class="col-sm-6" ng-mouseenter="showPauseOverlay=true" ng-mouseleave="showPauseOverlay=false">
+        <div id="pause-overlay" ng-click="pauseResumeToggle()" ng-show="showPauseOverlay">
+            <span class="glyphicon glyphicon-pause pause absolute-center" ng-class="{ 'glyphicon-pause': !workoutPaused, 'glyphicon-play': workoutPaused }">
+                <!--Empty-->
+            </span>
+        </div>
         <span ng-controller="WorkoutAudioController">
             <audio media-player="ticksAudio" loop autoplay src="assets/audio/tick10s.mp3"></audio>
             <audio media-player="nextUpAudio" src="assets/audio/nextup.mp3"></audio>
@@ -28,11 +35,6 @@
                          ng-style="{ 'width' : (currentExerciseDuration / currentExercise.duration) * 100 + '%' }">
                     </div>
                 </div>
-                <!--
-                <h1>
-                    Time Remaining: {{currentExercise.duration - currentExerciseDuration}}
-                </h1>
-                -->
                 <div class="row">
                     <h3 class="col-sm-6 text-left">
                         Time Remaining: <strong>{{currentExercise.duration - currentExerciseDuration}}</strong>
@@ -41,7 +43,7 @@
                         Next up: <strong>{{workoutPlan.exercises[currentExerciseIndex + 1].details.title}}</strong>
                     </h3>
                 </div>
-    ￼￼      </div>
+            </div>
         </div>
     </div>
     <div id="video-panel" class="col-sm-4 sidebars" ng-include="'video-panel.html'" ng-if="(currentExercise.details.related.videos || []).length > 0">

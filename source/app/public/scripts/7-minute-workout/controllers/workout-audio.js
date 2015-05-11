@@ -47,8 +47,31 @@
             }
         });
 
+        $scope.$watch('workoutPaused', function (newValue, oldValue) {
+            if (newValue) {
+                $scope.ticksAudio.pause();
+                $scope.nextUpAudio.pause();
+                $scope.nextUpExerciseAudio.pause();
+                $scope.halfWayAudio.pause();
+                $scope.aboutToCompleteAudio.pause();
+            } else {
+                $scope.ticksAudio.play();
+                
+                var halfwayAudioStarted = ($scope.halfWayAudio.currentTime > 0);
+                var halfwayAudioInProgress = ($scope.halfWayAudio.currentTime < $scope.halfWayAudio.duration);
+                var aboutToCompleteAudioStarted = ($scope.aboutToCompleteAudio.currentTime > 0);
+                var aboutToCompleteAudioInProgress = ($scope.aboutToCompleteAudio.currentTime < $scope.aboutToCompleteAudio.duration);
+                
+                if (halfwayAudioStarted && halfwayAudioInProgress)
+                    $scope.halfWayAudio.play();
+                    
+                if (aboutToCompleteAudioStarted && aboutToCompleteAudioInProgress)
+                    $scope.aboutToCompleteAudio.play();
+            }
+        });
+        
         var init = function () {
-            
+            // TBD
         };
 
         init();

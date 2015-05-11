@@ -38,7 +38,8 @@
             this.procedure = args.procedure;
         }
     
-        var restExercise;
+        var restExercise,
+            exerciseIntervalPromise;
     
         var startWorkout = function () {
             $scope.workoutPlan = createWorkout();
@@ -74,6 +75,55 @@
             return nextExercise;
         };
 
+        var startExerciseTimeTracking = function () {
+            var updateTimeAndDuration = function () {
+                ++$scope.currentExerciseDuration;
+                --$scope.workoutTimeRemaining;
+            };
+            
+            var count = function () {
+                return ($scope.currentExercise.duration - $scope.currentExerciseDuration);
+            };
+            
+            var promise = $interval(updateTimeAndDuration, 1000, count());
+            
+            promise.then(function () {
+                var next = getNextExercise($scope.currentExercise);
+                
+                if (next)
+                    startExercise(next);
+                else
+                    $location.path('/finish');
+            });
+            
+            return promise;
+        };
+
+        $scope.pauseWorkout = function () {
+            $interval.cancel(exerciseIntervalPromise);
+            $scope.workoutPaused = true;
+        };
+        
+        $scope.resumeWorkout = function () {
+            exerciseIntervalPromise = startExerciseTimeTracking();
+            $scope.workoutPaused = false;
+        };
+        
+        $scope.pauseResumeToggle = function () {
+            if ($scope.workoutPaused)
+                $scope.resumeWorkout();
+            else
+                $scope.pauseWorkout();
+        };
+
+        $scope.onKeyPressed = function (event) {
+            var p = 80, 
+                P = 112;
+                
+            if (event.which === p || event.which === P)
+                $scope.pauseResumeToggle();
+        };
+
         var startExercise = function (exercisePlan) {
             $scope.currentExercise = exercisePlan;
             $scope.currentExerciseDuration = 0;
@@ -81,19 +131,7 @@
             if (exercisePlan.details.name != 'rest')
                 $scope.currentExerciseIndex++;
         
-            var updateExerciseDuration = function () { 
-                ++$scope.currentExerciseDuration; 
-            };
-
-            $interval(updateExerciseDuration, 1000, $scope.currentExercise.duration)
-                .then(function () {
-                    var next = getNextExercise(exercisePlan);
-                  
-                    if (next)
-                        startExercise(next);
-                    else
-                        $location.path('/finish');
-            });
+            exerciseIntervalPromise = startExerciseTimeTracking();
         };
       
     	/*

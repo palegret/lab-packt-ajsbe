@@ -142,6 +142,37 @@ input[type="checkbox"].input-validation-error {
     overflow: auto;
 }
 
+#pause-overlay {
+    cursor: pointer;
+    height: 100%;
+    opacity: 0;    /* <== Comment line to test mouse event-based pause and resume. */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* <== Comment style to test mouse event-based pause and resume. */
+#pause-overlay:hover {    
+    opacity: .8;     
+}
+
+#pause-overlay .pause {
+    color: #4eaded;
+    font-size: 120px;
+    height: 140px;
+    width: 140px;
+}
+
+.absolute-center {
+    bottom: 0; 
+    left: 0; 
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0; 
+}
+
 /* END - Styles for workout page */
 
 
