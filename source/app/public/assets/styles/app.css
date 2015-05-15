@@ -20,11 +20,6 @@ body {
     padding-right: 15px;
 }
 
-/* Set padding to keep sidebars from hitting the header */
-.sidebars {
-    padding-top: 15px;
-}
-
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
@@ -173,10 +168,32 @@ input[type="checkbox"].input-validation-error {
     top: 0; 
 }
 
+#play-video-overlay {
+    height: 220px; /* 100%; */
+    opacity: 0;
+    position: absolute;  
+    top: 0px;
+    width: 293px; /* 100%; */
+    z-index: 10; 
+ 
+}
+
+#play-video-overlay:hover {
+    cursor: pointer;
+    opacity: .6;     
+}
+
+#play-video-overlay .video {
+    font-size: 80px;
+    width: 100px;
+    height: 100px;
+    color: #4eaded;
+}
+
 /* END - Styles for workout page */
 
 
-/* START - My own styles */
+/* ====| START - My own styles |============================================| */
 
 .procedure {
     padding-left: 15px;
@@ -186,4 +203,4 @@ input[type="checkbox"].input-validation-error {
     list-style-type: square;
 }
 
-/* END - My own styles */
+/* ====| END - My own styles |==============================================| */

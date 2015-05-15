@@ -4,7 +4,7 @@
 
 angular.module('7MinuteWorkout', []);
 
-angular.module('app', ['ngRoute', 'ngSanitize', 'mediaPlayer', '7MinuteWorkout'])
+angular.module('app', ['ngRoute', 'ngSanitize', 'ui.bootstrap', 'mediaPlayer', '7MinuteWorkout'])
 	.config(function ($routeProvider, $sceDelegateProvider) {
 	    var viewRoot = 'content/views/';
 	    
