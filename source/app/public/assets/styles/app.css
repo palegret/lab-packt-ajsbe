@@ -193,6 +193,56 @@ input[type="checkbox"].input-validation-error {
 /* END - Styles for workout page */
 
 
+/* START - Animation effects */
+
+div[ng-view] {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+div[ng-view].ng-enter,
+div[ng-view].ng-leave {
+    -webkit-transition: all 1s ease;
+       -moz-transition: all 1s ease;
+         -o-transition: all 1s ease;
+            transition: all 1s ease;
+}
+
+div[ng-view].ng-enter {
+    left: 100%; /* Initial css for view transition in */
+}
+
+div[ng-view].ng-leave {
+    left: 0; /* Initial css for view transition out */
+}
+
+div[ng-view].ng-enter-active {
+    left: 0; /* Final css for view transition in */
+}
+
+div[ng-view].ng-leave-active {
+    left: -100%; /* Final CSS for view transition out */
+}
+
+.video-image.ng-enter,
+.video-image.ng-move {
+    -webkit-animation: bounceIn 1s;
+       -moz-animation: bounceIn 1s;
+        -ms-animation: bounceIn 1s;
+            animation: bounceIn 1s;
+}
+
+.video-image.ng-leave {
+    -webkit-animation: bounceOut 1s;
+       -moz-animation: bounceOut 1s;
+        -ms-animation: bounceOut 1s;
+            animation: bounceOut 1s;
+}
+
+/* END - Animation effects */
+
+
 /* ====| START - My own styles |============================================| */
 
 .procedure {
