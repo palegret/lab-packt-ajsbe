@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="assets/styles/app.css" />
         <link rel="shortcut icon" type="image/x-icon" href="//ide.c9.io/favicon.ico">
     </head>
-    <body ng-app="app" ng-controller="WorkoutController">
+    <body ng-app="app" ng-controller="RootController">
         <div class="navbar navbar-default navbar-fixed-top top-navbar">
             <div class="container app-container">
                 <div class="navbar-header">
@@ -19,6 +19,11 @@
                         7 Minute Workout
                     </h1>
                 </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="workoutHistoryLink" ng-click="showWorkoutHistory()" title="Workout History">History</a>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="container body-content app-container">
@@ -31,9 +36,11 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.js"></script>
         <script src="lib/angular-media-player/angular-media-player.js"></script>
         <script src="scripts/app.js"></script>
+        <script src="scripts/7-minute-workout/controllers/root.js"></script>
         <script src="scripts/7-minute-workout/controllers/workout.js"></script>
         <script src="scripts/7-minute-workout/controllers/workout-audio.js"></script>
         <script src="scripts/7-minute-workout/controllers/workout-video.js"></script>
         <script src="scripts/7-minute-workout/filters.js"></script>
+        <script src="scripts/7-minute-workout/services.js"></script>
     </body>
 </html>

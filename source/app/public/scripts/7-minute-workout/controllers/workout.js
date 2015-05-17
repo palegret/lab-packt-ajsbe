@@ -1,13 +1,10 @@
-/* Controllers */
-    
-+function (window, angular) {
++function (window, angular, sevenMinuteWorkout) {
     'use strict';
     
-    var sevenMinuteWorkout = angular.module('7MinuteWorkout');
-    
-    sevenMinuteWorkout.controller('WorkoutController', ['$scope', '$interval', '$location', function ($scope, $interval, $location) {
+    sevenMinuteWorkout.controller('WorkoutController', ['$scope', '$interval', '$location', 'workoutHistoryTracker', function ($scope, $interval, $location, workoutHistoryTracker) {
         function WorkoutPlan(args) {
             this.DEFAULT_DURATION = 30;
+
             this.exercises = [];
             this.name = args.name;
             this.title = args.title;
@@ -55,6 +52,7 @@
                 duration: $scope.workoutPlan.restBetweenExercise
             };
             
+            workoutHistoryTracker.startTracking();
             $scope.currentExerciseIndex = -1;
             startExercise($scope.workoutPlan.exercises.shift());
         };
@@ -71,16 +69,17 @@
         };
 
         var startExerciseTimeTracking = function () {
+            var workoutComplete = function () {
+                workoutHistoryTracker.endTracking(true);
+                $location.path('/finish');
+            };
+
             var updateTimeAndDuration = function () {
                 ++$scope.currentExerciseDuration;
                 --$scope.workoutTimeRemaining;
             };
             
-            var count = function () {
-                return ($scope.currentExercise.duration - $scope.currentExerciseDuration);
-            };
-            
-            var promise = $interval(updateTimeAndDuration, 1000, count());
+            var promise = $interval(updateTimeAndDuration, 1000, ($scope.currentExercise.duration - $scope.currentExerciseDuration));
             
             promise.then(function () {
                 var next = getNextExercise($scope.currentExercise);
@@ -88,7 +87,7 @@
                 if (next)
                     startExercise(next);
                 else
-                    $location.path('/finish');
+                    workoutComplete();
             });
             
             return promise;
@@ -386,4 +385,4 @@
     
         init();
     }]);
-}(window, window.angular);
+}(this, this.angular, this.sevenMinuteWorkout);

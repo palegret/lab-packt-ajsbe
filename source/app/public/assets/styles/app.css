@@ -59,8 +59,8 @@ input[type="checkbox"].input-validation-error {
 
 /* START - Styles for top nav bar */
 .navbar-default.top-navbar {
-    background-color: #4eaded;
-    border-color: #4eaded;
+    background-color: #337ab7; /*#4eaded;*/
+    border-color: #337ab7; /*#4eaded;*/
 }
 
 .navbar-default.top-navbar h1 {
@@ -251,6 +251,16 @@ div[ng-view].ng-leave-active {
 
 .procedure > li {
     list-style-type: square;
+}
+
+#workoutHistoryLink {
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#workoutHistoryLink:hover {
+    text-decoration: underline;
 }
 
 /* ====| END - My own styles |==============================================| */

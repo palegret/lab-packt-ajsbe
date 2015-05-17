@@ -1,9 +1,7 @@
-+function (window, Math, angular) {
++function (window, angular, sevenMinuteWorkout) {
     'use strict';
     
-    var sevenMinuteWorkout = angular.module('7MinuteWorkout');
-    
-    sevenMinuteWorkout.controller('WorkoutAudioController', ['$scope', '$timeout', function ($scope, $timeout) {
+    sevenMinuteWorkout.controller('WorkoutAudioController', ['$scope', '$window', '$timeout', function ($scope, $window, $timeout) {
         $scope.exercisesAudio = [];
 
         var workoutPlanwatch = $scope.$watch('workoutPlan', function (newValue, oldValue) {
@@ -36,7 +34,7 @@
         
         $scope.$watch('currentExerciseDuration', function (newValue, oldValue) {
             if (newValue) {
-                var isHalfwayPoint = (newValue === Math.floor($scope.currentExercise.duration / 2)),
+                var isHalfwayPoint = (newValue === $window.Math.floor($scope.currentExercise.duration / 2)),
                     isRestExercise = $scope.currentExercise.details.name === 'rest',
                     isAboutToComplete = (newValue === $scope.currentExercise.duration - 3);
                     
@@ -76,4 +74,4 @@
 
         init();
     }]);
-}(window, window.Math, window.angular);
+}(this, this.angular, this.sevenMinuteWorkout);

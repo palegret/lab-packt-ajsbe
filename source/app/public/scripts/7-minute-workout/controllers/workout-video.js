@@ -1,7 +1,5 @@
-+function (window, Math, angular) {
++function (window, angular, sevenMinuteWorkout) {
     'use strict';
-    
-    var sevenMinuteWorkout = angular.module('7MinuteWorkout');
     
     sevenMinuteWorkout.controller('WorkoutVideoController', ['$scope', '$modal', function ($scope, $modal) {
         $scope.playVideo = function (videoId) {
@@ -12,7 +10,7 @@
                 controller: VideoPlayerController,
                 scope: $scope.$new(true),
                 resolve: {
-                    video: function () {  
+                    video: function () { 
                         return '//www.youtube.com/embed/' + videoId;
                     }
                 },
@@ -23,8 +21,11 @@
                 $scope.resumeWorkout();
             };
             
-            var modal = $modal.open(options)
-                .result['finally'](resumeWorkout);
+            // I think the 'finally' method on the promise is invoked using 
+            // square bracket notation because certain JavaScript parsers 
+            // (probably older ones) interpret 'finally' as a reserved word.
+            
+            $modal.open(options).result['finally'](resumeWorkout);
         };
 
         var VideoPlayerController = function ($scope, $modalInstance, video) {
@@ -45,4 +46,4 @@
         
         init();
     }]);
-}(window, window.Math, window.angular);
+}(this, this.angular, this.sevenMinuteWorkout);
