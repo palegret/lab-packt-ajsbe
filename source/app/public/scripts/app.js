@@ -9,6 +9,7 @@
 		'ngAnimate', 
 		'ui.bootstrap', 
 		'mediaPlayer', 
+		'LocalStorageModule',
 		'7MinuteWorkout'
 	]);
 
