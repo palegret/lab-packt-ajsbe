@@ -1,7 +1,7 @@
 +function (window, angular, sevenMinuteWorkout) {
     'use strict';
     
-    sevenMinuteWorkout.factory('workoutHistoryTracker', ['$rootScope', function ($rootScope) {
+    sevenMinuteWorkout.factory('workoutHistoryTracker', ['$rootScope', 'appEvents', function ($rootScope, appEvents) {
         var MAX_HISTORY_ITEMS = 20; // Track for last 20 exercises
 
         var _workoutHistory = [],
@@ -29,9 +29,14 @@
                 return _workoutHistory;
             }
         };
-        
+
+        $rootScope.$on(appEvents.workout.exerciseStarted, function (e, args) { 
+            _currentWorkoutLog.lastExercise = args.title;
+            _currentWorkoutLog.exercisesDone++;
+        });
+   
         $rootScope.$on('$routeChangeSuccess', function (e, args) {
-            // End the current tracking if in progress the route changes
+            // End the current tracking if the route changes while in progress 
             if (_currentWorkoutLog)
                 _service.endTracking(false); 
         });

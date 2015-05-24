@@ -1,7 +1,7 @@
 +function (window, angular, sevenMinuteWorkout) {
     'use strict';
     
-    sevenMinuteWorkout.controller('WorkoutController', ['$scope', '$interval', '$location', 'workoutEntities', 'workoutExercises', 'workoutHistoryTracker', function ($scope, $interval, $location, workoutEntities, workoutExercises, workoutHistoryTracker) {
+    var _workoutControllerFactory = function ($scope, $interval, $location, workoutEntities, workoutExercises, workoutHistoryTracker, appEvents) {
         var restExercise,
             exerciseIntervalPromise;
     
@@ -42,8 +42,8 @@
             };
 
             var updateTimeAndDuration = function () {
-                ++$scope.currentExerciseDuration;
-                --$scope.workoutTimeRemaining;
+                $scope.currentExerciseDuration++;
+                $scope.workoutTimeRemaining--;
             };
             
             var promise = $interval(updateTimeAndDuration, 1000, ($scope.currentExercise.duration - $scope.currentExerciseDuration));
@@ -89,9 +89,11 @@
             $scope.currentExercise = exercisePlan;
             $scope.currentExerciseDuration = 0;
         
-            if (exercisePlan.details.name != 'rest')
+            if (exercisePlan.details.name != 'rest') {
                 $scope.currentExerciseIndex++;
-        
+                $scope.$emit(appEvents.workout.exerciseStarted, exercisePlan.details);
+            }
+            
             exerciseIntervalPromise = startExerciseTimeTracking();
         };
     
@@ -111,5 +113,16 @@
         };
     
         init();
-    }]);
+    };
+    
+    sevenMinuteWorkout.controller('WorkoutController', [
+        '$scope', 
+        '$interval', 
+        '$location', 
+        'workoutEntities', 
+        'workoutExercises', 
+        'workoutHistoryTracker', 
+        'appEvents', 
+        _workoutControllerFactory
+    ]);
 }(this, this.angular, this.sevenMinuteWorkout);
