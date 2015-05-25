@@ -1,10 +1,10 @@
 +function (window, angular, sevenMinuteWorkout) {
     'use strict';
     
-    sevenMinuteWorkout.factory('workoutHistoryTracker', ['$rootScope', 'appEvents', function ($rootScope, appEvents) {
-        var MAX_HISTORY_ITEMS = 20; // Track for last 20 exercises
-
-        var _workoutHistory = [],
+    sevenMinuteWorkout.factory('workoutHistoryTracker', ['$rootScope', 'localStorageService', 'appEvents', function ($rootScope, localStorageService, appEvents) {
+        var MAX_HISTORY_ITEMS = 20, // Track for last 20 exercises
+            _storageKey = 'workouthistory',
+            _workoutHistory = localStorageService.get(_storageKey) || [],
             _currentWorkoutLog = null;
             
         var _service = {
@@ -19,11 +19,13 @@
                     _workoutHistory.shift();
 
                 _workoutHistory.push(_currentWorkoutLog);
+                localStorageService.add(_storageKey, _workoutHistory);
             },
             endTracking: function (completed) {
                 _currentWorkoutLog.completed = completed;
                 _currentWorkoutLog.endedOn = new Date().toISOString();
                 _currentWorkoutLog = null;
+                localStorageService.add(_storageKey, _workoutHistory);
             },
             getHistory: function () {
                 return _workoutHistory;
@@ -33,6 +35,7 @@
         $rootScope.$on(appEvents.workout.exerciseStarted, function (e, args) { 
             _currentWorkoutLog.lastExercise = args.title;
             _currentWorkoutLog.exercisesDone++;
+            localStorageService.add(_storageKey, _workoutHistory);
         });
    
         $rootScope.$on('$routeChangeSuccess', function (e, args) {

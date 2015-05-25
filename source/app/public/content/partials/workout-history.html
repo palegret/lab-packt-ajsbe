@@ -40,7 +40,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="historyItem in history | filter:search | orderBy:'-startedOn'">
+                    <tr ng-repeat="historyItem in history | filter:search | orderBy:'-startedOn'" 
+                        ng-class="{ 'even-class': $even, 'odd-class': $odd }">
                         <td>
                             {{$index + 1}}
                         </td>
