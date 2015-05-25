@@ -264,4 +264,12 @@ div[ng-view].ng-leave-active {
     text-decoration: underline;
 }
 
+.odd-class {
+    background-color: #eee;
+}
+
+.even-class {
+    background-color: #fff;
+}
+
 /* ====| END - My own styles |==============================================| */
